@@ -79,24 +79,8 @@
 		  </div>
 	</div>
 	<?php
-		$db_sid =    "(DESCRIPTION =
-					    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-AR5Q8KO)(PORT = 1521))
-					    (CONNECT_DATA =
-					      (SERVER = DEDICATED)
-					      (SERVICE_NAME = nabeel)
-					    )
-					  	)";
-		$db_user = "scott";
-		$db_pass = "1234";
-		$con = oci_connect($db_user, $db_pass, $db_sid);
-		if($con)
-		{
-			//Empty
-		}
-		else
-		{
-			die("Could not Connect to Oracle!!!");
-		}  
+		require_once __DIR__ . '/database.php';
+		$con = createDatabaseConnection();
 		$err = "";
 		if(isset($_POST["Submit"]))
 		{

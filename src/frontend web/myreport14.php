@@ -71,25 +71,8 @@
 	</div>
 	<?php  // creating a database connection 
 	// example 2.1 ..creating a database connection
-	$db_sid =    "(DESCRIPTION =
-					    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-AR5Q8KO)(PORT = 1521))
-					    (CONNECT_DATA =
-					      (SERVER = DEDICATED)
-					      (SERVICE_NAME = nabeel)
-					    )
-					  	)"; 
-  
-   $db_user = "scott";   // Oracle username e.g "scott"
-   $db_pass = "1234";    // Password for user e.g "1234"
-   $con = oci_connect($db_user,$db_pass,$db_sid); 
-
-	if($con) 
-	{ 
-	} 
-	else 
-    {
-		die('Could not connect to Oracle: '); 
-	} 
+	require_once __DIR__ . '/database.php';
+	$con = createDatabaseConnection();
   
 ?>
 	<div class="header">
