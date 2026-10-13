@@ -6,8 +6,8 @@ import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WEB = ROOT / "src/frontend web"
-SQL = ROOT / "src/db scripts"
+WEB = ROOT / "web"
+SQL = ROOT / "database"
 
 
 def validate_readme_images() -> None:
@@ -41,8 +41,8 @@ def main() -> None:
         ROOT / "LICENSE",
         ROOT / ".env.example",
         WEB / "database.php",
-        SQL / "DDL and DML.sql",
-        SQL / "All Stored Queries.SQL",
+        SQL / "schema.sql",
+        SQL / "stored-queries.sql",
     ]
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
     if missing:

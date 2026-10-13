@@ -21,7 +21,7 @@ jobs:
           coverage: none
 
       - name: Check PHP syntax
-        run: find "src/frontend web" -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: find web -name '*.php' -print0 | xargs -0 -n1 php -l
 
       - name: Validate repository structure
         run: python3 scripts/validate_repository.py

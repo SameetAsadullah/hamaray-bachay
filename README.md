@@ -20,14 +20,10 @@ A school administration website backed by an Oracle relational database. The pro
 ## Architecture
 
 ```text
-src/
-├── db scripts/
-│   ├── DDL and DML.sql          Schema, triggers, sequences, and seed data
-│   └── All Stored Queries.SQL   Reports, views, and project queries
-├── frontend web/                PHP pages and shared Oracle connection
-├── Dataset.xlsx                 Original project dataset
-├── Project ER.png               Entity-relationship diagram
-└── Table Description.xlsx       Schema reference
+database/                        Oracle schema and stored queries
+data/                            Source dataset
+docs/database/                   Database model and table reference
+web/                             PHP pages and shared Oracle connection
 ```
 
 The database design is the project's main technical focus. See [Database design](docs/DATABASE.md) for a concise guide to its tables and behavior.
@@ -43,7 +39,7 @@ The database design is the project's main technical focus. See [Database design]
 ### Setup
 
 1. Create an Oracle user/schema for the application.
-2. Run `src/db scripts/DDL and DML.sql` in that schema.
+2. Run `database/schema.sql` in that schema.
 3. Configure the database connection as environment variables. `.env.example` shows the expected values:
 
    ```bash
@@ -54,10 +50,10 @@ The database design is the project's main technical focus. See [Database design]
 
    For Apache/XAMPP, provide the same variables in the web server environment rather than committing them to the repository.
 
-4. Serve `src/frontend web` through your PHP-capable web server.
+4. Serve `web` through your PHP-capable web server.
 5. Open `insertion.php` to start with the student admission workflow.
 
-Database configuration is centralized in `src/frontend web/database.php`. Real credentials should never be added to source control.
+Database configuration is centralized in `web/database.php`. Real credentials should never be added to source control.
 
 ## Screenshots
 
