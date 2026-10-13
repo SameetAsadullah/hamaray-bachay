@@ -12,7 +12,7 @@ The Oracle schema is the central part of this project. Its source is preserved i
 - `ACCOMPANY` models the people authorized to accompany a student.
 - `REGISTERED` connects students to classes and courses.
 
-Log tables retain changes to important records for reporting and auditing exercises.
+Log tables retain changes to important records for reporting and audit workflows.
 
 ## Database behavior
 
@@ -21,7 +21,7 @@ The scripts demonstrate more than table creation. They include:
 - sequences for generated identifiers;
 - triggers for keys, history records, and registration workflows;
 - stored queries and reporting views;
-- seed data used by the original demonstration.
+- seed data used by the original system.
 
 Run `DDL and DML.sql` first to create and populate the schema. `All Stored Queries.SQL` contains the reporting queries and views used during the project.
 

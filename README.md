@@ -15,7 +15,7 @@ A school administration website backed by an Oracle relational database. The pro
 - Record authorized people accompanying students.
 - Search student and parent records.
 - Produce class and student reports.
-- Demonstrate Oracle sequences, triggers, views, and stored queries.
+- Uses Oracle sequences, triggers, views, and stored queries.
 
 ## Architecture
 
@@ -77,7 +77,7 @@ More interface captures are available in the [`extras`](extras) directory.
 
 ## Project status
 
-This is an academic database project retained as a portfolio piece. Its schema and original PHP workflows are preserved, while repository configuration and documentation have been improved. It is not intended to be deployed as a production school system without authentication, authorization, input validation, CSRF protection, and a broader security review.
+This repository preserves the original Oracle schema and PHP workflows with improved configuration and documentation. Production deployment requires authentication, authorization, input validation, CSRF protection, and a broader security review.
 
 ## Contributors
 
